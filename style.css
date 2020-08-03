@@ -104,7 +104,7 @@ input[type='text']:focus {
     text-align: center;
     margin: 0 auto;
     background: #222436;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 15px;
     padding: 5px 20px;
 }
@@ -119,6 +119,12 @@ input[type='text']:focus {
     margin-top: 10px;
 }
 
-.notify {
+#show-1 {
+    position: relative;
+    display: none;
+}
+
+#show-2 {
+    position: relative;
     display: none;
 }

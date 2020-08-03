@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <form action="//www.aspsnippets.com/">
+        <input type="button" id="btn" value="Button" />
+        <input type="submit" id="btnSubmit" value="Submit" />
+        <script type="text/javascript">
+            window.onbeforeunload = function() {
+                var inputs = document.getElementsByTagName("INPUT");
+                for (var i = 0; i < inputs.length; i++) {
+                    if (inputs[i].type == "button" || inputs[i].type == "submit") {
+                        inputs[i].disabled = true;
+                    }
+                }
+            };
+        </script>
+    </form>
+</body>
+
+</html>
