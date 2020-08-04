@@ -15,51 +15,54 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input id="Output" class="form-control" type="text">
-                    <button id="GenerateBtn" class="generate-btn">Generate Pin</button>
+                    <input id="generatePin" class="form-control" type="text">
+                    <button id="generateBtn" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="inputSection half-width">
                     <form name="form">
-                        <input class="form-control" type="text" name="textView" id="textView" value="">
+                        <input class="form-control" type="text" name="textView" id="submitPin" value="">
                     </form>
                     <div class="numbers">
-                        <div class="calc-body">
-                            <div class="calc-button-row">
-                                <div onclick="insert(7)" type="button" value="7" class="button">7</div>
-                                <div onclick="insert(8)" type="button" value="8" class="button">8</div>
-                                <div onclick="insert(9)" type="button" value="9" class="button">9</div>
+                        <section id="numbers-btn">
+                            <div class="calc-body">
+                                <div class="calc-button-row">
+                                    <div onclick="insert(7)" type="button" value="7" class="button">7</div>
+                                    <div onclick="insert(8)" type="button" value="8" class="button">8</div>
+                                    <div onclick="insert(9)" type="button" value="9" class="button">9</div>
 
-                            </div>
-                            <div class="calc-button-row">
-                                <div onclick="insert(4)" type="button" value="4" class="button">4</div>
-                                <div onclick="insert(5)" type="button" value="5" class="button">5</div>
-                                <div onclick="insert(6)" type="button" value="6" class="button">6</div>
-                            </div>
-                            <div class="calc-button-row">
-                                <div onclick="insert(1)" type="button" value="1" class="button">1</div>
-                                <div onclick="insert(2)" type="button" value="2" class="button">2</div>
-                                <div onclick="insert(3)" type="button" value="3" class="button">3</div>
-                            </div>
-                            <div class="calc-button-row">
-                                <div onclick="back()" type="button" class="button ">
-                                    <</div>
-                                        <div onclick="insert(0)" type="button" value="0" class="button">0</div>
-                                        <div onclick="clean()" type="button" class="button">C</div>
                                 </div>
-                                <div>
-                                    <button alert="Firstly give 4 digits Pin" type="submit" class="submit-btn" id="SubmitButton">Submit</button>
-                                    <p class="action-left">3 try left</p>
+                                <div class="calc-button-row">
+                                    <div onclick="insert(4)" type="button" value="4" class="button">4</div>
+                                    <div onclick="insert(5)" type="button" value="5" class="button">5</div>
+                                    <div onclick="insert(6)" type="button" value="6" class="button">6</div>
                                 </div>
-                            </div>
+                                <div class="calc-button-row">
+                                    <div onclick="insert(1)" type="button" value="1" class="button">1</div>
+                                    <div onclick="insert(2)" type="button" value="2" class="button">2</div>
+                                    <div onclick="insert(3)" type="button" value="3" class="button">3</div>
+                                </div>
+                                <div class="calc-button-row">
+                                    <div style="background-color: yellowgreen;" onclick="back()" type="button" class="button ">
+                                        <</div>
+                                            <div onclick="insert(0)" type="button" value="0" class="button">0</div>
+                                            <div style="background-color: red;" onclick="clean()" type="button" class="button">C</div>
+                                    </div>
+                        </section>
+                        <div>
+                        </div>
+                        <button alert="Firstly give 4 digits Pin" type="submit" class="submit-btn" id="submitBtn">Submit</button>
+                        <p id="attempt" class="action-left"><span style="color:yellow;" id="tryLeft">3 </span> try left</p>
+                        </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div id="notice-board" class="notify-section">
-                <p id="show-1" class="notify">❌ Pin Didn't Match, Please try again</p>
-                <p id="show-2" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+                <p style="background-color: red;" id="notMatch" class="notify">❌ Pin Didn't Match, Please try again</p>
+                <p style="background-color: darkgreen;" id="match" class="notify">✅ Pin Matched... Secret door is opening for you</p>
             </div>
         </div>
 </body>
